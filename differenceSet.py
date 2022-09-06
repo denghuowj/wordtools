@@ -40,8 +40,8 @@ text_i = 0
 for _ in range(len(total_text)):
     if text_i >= len(total_text):
         break
-    if ('\u0041' <= total_text[text_i] <= '\u005a') or ('\u0061' <= total_text[text_i] <= '\u007a'):
-        doc.add_paragraph(total_text[text_i:text_i + 3])
+    if ('\u0041' <= total_text[text_i] <= '\u005a') or ('\u0061' <= total_text[text_i] <= '\u007a'):  # 字母占一行
+        doc.add_paragraph(total_text[text_i:text_i + 3])  # 根据自己情况修改，我的字典里每个字母后面有两个空格，所以都加上
         text_i += 3
         continue
     else:
